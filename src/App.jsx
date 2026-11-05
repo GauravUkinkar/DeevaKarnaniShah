@@ -11,6 +11,8 @@ import Blog from "./Pages/Blog/Blog";
 import Charity from "./Pages/Charity/Charity";
 import Awards from "./Pages/Awards/Awards";
 import BookDetails from "./Pages/BookDetails/BookDetails";
+import NotFound from "./Pages/NotFound/NotFound";
+import ScrollToTop from "./componant/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -25,8 +27,10 @@ function App() {
           <Route path="/charity" element={<Charity />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/books/:slug" element={<BookDetails />} />
+         <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <ScrollToTop />
       </BrowserRouter>
     </>
   );
