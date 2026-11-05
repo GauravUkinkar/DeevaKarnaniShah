@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
 import './App.scss'
-import { BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './componant/Header/Header'
+import Testimonial from './Pages/Testimonial/Testimonial'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
      <BrowserRouter >
      <Header />
      <Routes>
+      <Route path="/" element={<Testimonial/>} />
 
       
      </Routes>
