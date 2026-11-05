@@ -6,9 +6,10 @@ import "./Contact.scss";
 const Contact = () => {
   return (
     <div className="contact-parent parent">
+      <Top title="Contact Me" />
       <div className="contact-container container">
 
-        <Top title="Contact Me" />
+        
 
         <div className="contact-form-section">
           <div className="contact-form-heading">

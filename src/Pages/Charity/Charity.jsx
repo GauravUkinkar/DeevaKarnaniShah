@@ -5,6 +5,7 @@ import Top from "../../componant/Top-sec/Top";
 
 import charityBanner from "../../assets/Banner-01.jpg";
 import stLukesBanner from "../../assets/1234.jpg";
+import BF from "../../componant/Before-footer/BF";
 
 const charityData = [
   {
@@ -48,6 +49,7 @@ const charityData = [
 
 const Charity = () => {
   return (
+   <>
     <div className="charity-parent parent">
       <Top title="Charity" />
 
@@ -76,6 +78,8 @@ const Charity = () => {
         </section>
       ))}
     </div>
+    <BF />
+   </>
   );
 };
 

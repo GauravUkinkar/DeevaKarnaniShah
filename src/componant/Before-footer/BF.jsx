@@ -13,7 +13,7 @@ const BF = ({
   return (
     <div className="contact-before-parent parent">
 
-      <div className="contact-before-cont container">
+      
         <div className="contact-cta-section">
 
           <img
@@ -39,7 +39,7 @@ const BF = ({
 
         </div>
       </div>
-    </div>
+    
 
   );
 };

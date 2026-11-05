@@ -1,308 +1,518 @@
-
 .awards-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-padding: 0px 20px;
-  .awards-news-section,
-  .book-launch-section {
+  .awards-ornament {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+  }
+
+  // News Articles Section
+  .awards-news-section {
     position: relative;
-    width: 100%;
-    background: #fbf1e2;
-    border-radius: 20px;
     overflow: hidden;
-
-    .awards-ornament {
-      position: absolute;
-      height: auto;
-      object-fit: contain;
-      pointer-events: none;
-      z-index: 1;
-    }
+    background: #faf0e1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     .awards-ornament-left {
-      width: 220px;
-      top: -30px;
-      left: -20px;
+      top: -20%;
+      left: 0;
+      width: 100px;
     }
 
     .awards-ornament-right {
-      width: 200px;
-      bottom: -40px;
-      right: -25px;
+      bottom: -10%;
+      right: -1%;
+      width: 100px;
     }
-  }
-
-
-  .awards-news-section {
-    min-height: 650px;
-    padding: 95px 30px 70px;
-    margin: 40px auto 50px;
 
     .awards-news-heading {
       position: relative;
       z-index: 2;
       text-align: center;
-      margin-bottom: 60px;
 
       span {
         display: block;
-        font-size: 15px;
+        font-family: Georgia, serif;
+        font-size: 16px;
         font-style: italic;
-        color: #687b00;
-        margin-bottom: 8px;
+        color: #568b00;
+        margin-bottom: 7px;
       }
 
       h2 {
-        font-size: 28px;
+        color: #064b55;
+        font-size: clamp(22px, 2vw, 28px);
         font-weight: 600;
-        color: #004653;
-        margin: 0;
       }
     }
 
     .awards-news-card {
       position: relative;
       z-index: 2;
-
-      width: 100%;
-      max-width: 1300px;
-      min-height: 325px;
-      margin: 0 auto;
-
+      width: 70%;
+      margin: auto;
+      padding: 40px;
       background: #fffaf2;
-      border-radius: 30px;
-      padding: 20px 48px;
+      border-radius: 18px;
 
-      display: grid;
-      grid-template-columns: 290px 1fr;
+      display: flex;
       align-items: center;
-      gap: 50px;
+      justify-content: space-between;
+      gap: 20px;
 
       .awards-news-image {
-        width: 100%;
-        height: 287px;
-        overflow: hidden;
+        width: 300px;
+
+        flex-shrink: 0;
 
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
           display: block;
+          object-fit: cover;
+          border-radius: 5px;
         }
       }
 
       .awards-news-content {
+        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 22px;
         text-align: center;
-        gap: 45px;
 
         p {
-          font-size: 17px;
-          color: #004653;
+          color: #45545a;
+          font-size: 16px;
           line-height: 1.7;
-          margin: 0;
         }
 
         .btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 185px;
-          height: 48px;
-          padding: 0 25px;
-
-          background: #195b65;
-          color: #fff;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 500;
-
-          box-shadow: 6px 6px 0 #b8d9d9;
-          transition: 0.3s ease;
-
-          &:hover {
-            background: #004653;
-            transform: translate(3px, 3px);
-            box-shadow: 3px 3px 0 #b8d9d9;
-          }
+          font-size: 12px;
+          padding: 12px 22px;
+          border-radius: 0;
         }
       }
     }
   }
 
-  /* SECOND SECTION - BOOK LAUNCH */
+  // Book Launch Section
   .book-launch-section {
-    min-height: 650px;
-    padding: 95px 40px;
-    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    background: #faf0e1;
+    border-radius: 18px;
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .awards-ornament-left {
+      top: -10%;
+      left: 0;
+      width: 100px;
+    }
+
+    .awards-ornament-right {
+      bottom: -10%;
+      right: -1%;
+      width: 180px;
+    }
 
     .book-launch-heading {
       position: relative;
       z-index: 2;
       text-align: center;
-      margin-bottom: 60px;
 
       span {
         display: block;
-        font-size: 15px;
+        font-family: Georgia, serif;
+        font-size: 16px;
         font-style: italic;
-        color: #687b00;
-        margin-bottom: 8px;
+        color: #568b00;
+        margin-bottom: 7px;
       }
 
       h2 {
-        font-size: 28px;
+        color: #064b55;
+        font-size: clamp(22px, 2vw, 28px);
         font-weight: 600;
-        color: #004653;
-        margin: 0;
       }
     }
 
     .book-launch-grid {
       position: relative;
       z-index: 2;
-
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .book-launch-card {
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
       gap: 20px;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(6, 75, 85, 0.08);
+      }
 
-      max-width: 1500px;
-      margin: 0 auto;
+      .book-launch-image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
 
-      .book-launch-card {
-        background: #fff;
-        border-radius: 22px;
-        padding: 10px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .book-launch-image {
+        img {
           width: 100%;
-          height: 345px;
-          overflow: hidden;
-          border-radius: 10px;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-          }
+          height: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: top;
+          transition: transform 0.5s ease;
         }
+      }
 
-        &:hover .book-launch-image img {
-          transform: scale(1.04);
-        }
+      &:hover .book-launch-image img {
+        transform: scale(1.04);
+      }
 
-        p {
-          font-size: 16px;
-          line-height: 1.5;
-          color: #004653;
-          margin: 20px 0;
-          min-height: 48px;
-        }
+      p {
+        color: #064b55;
+        font-size: 14px;
+        line-height: 1.6;
+        min-height: 45px;
+        margin-bottom: 10px;
+      }
 
-        .btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 175px;
-          height: 46px;
-          padding: 0 20px;
-
-          background: #195b65;
-          color: #fff;
-          text-decoration: none;
-          font-size: 14px;
-          font-weight: 500;
-
-          box-shadow: 6px 6px 0 #b8d9d9;
-          transition: 0.3s ease;
-
-          &:hover {
-            background: #004653;
-            transform: translate(3px, 3px);
-            box-shadow: 3px 3px 0 #b8d9d9;
-          }
-        }
+      .btn {
+        font-size: 12px;
+        padding: 11px 18px;
+        border-radius: 0;
+        margin-top: auto;
       }
     }
   }
-    /* THIRD SECTION - AWARDS & ACHIEVEMENTS */
 
+  // Awards & Achievements
   .awards-achievements-section {
-    width: 100%;
-    padding: 30px 35px;
-    margin: 40px auto;
+    padding: 0 0 35px;
 
     .awards-achievements-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      max-width: 1500px;
-      margin: 0 auto;
+      gap: 15px;
+      max-width: 1250px;
+      margin: auto;
     }
 
     .achievement-card {
-      background: #fbf1e2;
-      border-radius: 22px;
-      padding: 25px;
+      background: #faf0e1;
+      padding: 12px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
 
-      display: flex;
-      flex-direction: column;
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(6, 75, 85, 0.08);
+      }
 
       .achievement-image {
         width: 100%;
-        height: 415px;
         overflow: hidden;
-        border-radius: 20px;
-        margin-bottom: 18px;
+        border-radius: 12px;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           display: block;
-          transition: transform 0.4s ease;
+          object-position: top;
+          transition: transform 0.5s ease;
         }
       }
 
-      &:hover {
-        .achievement-image img {
-          transform: scale(1.04);
-        }
+      &:hover .achievement-image img {
+        transform: scale(1.04);
       }
 
       .achievement-year {
-        font-size: 15px;
+        display: block;
+        font-family: Georgia, serif;
+        font-size: 12px;
         font-style: italic;
-        color: #687b00;
-        margin-bottom: 10px;
+        color: #568b00;
+        margin-bottom: 5px;
       }
 
       h3 {
-        font-size: 22px;
+        color: #064b55;
+        font-size: 17px;
         font-weight: 600;
-        line-height: 1.35;
-        color: #004653;
-        margin: 0 0 5px;
+        line-height: 1.3;
+        margin-bottom: 7px;
       }
 
       p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #555;
+        color: #45545a;
+        font-size: 13px;
+        line-height: 1.7;
         margin: 0;
       }
     }
   }
 }
 
+// Large Screens
+@media (min-width: 1500px) {
+  .awards-parent {
+    .book-launch-section {
+      .book-launch-card {
+        .book-launch-image {
+          height: 250px;
+        }
+      }
+    }
 
+    .awards-achievements-section {
+      .achievement-card {
+        .achievement-image {
+          height: 290px;
+        }
+      }
+    }
+  }
+}
 
+// Tablet
+@media (max-width: 1024px) {
+  .awards-parent {
+    .awards-news-section,
+    .book-launch-section {
+      padding: 55px 25px 40px;
+    }
 
+    .book-launch-section {
+      .book-launch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .book-launch-card {
+        .book-launch-image {
+          height: 260px;
+        }
+      }
+    }
+
+    .awards-achievements-section {
+      .awards-achievements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .achievement-card {
+        .achievement-image {
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .awards-parent {
+    .awards-news-section,
+    .book-launch-section {
+      padding: 45px 18px 30px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+    }
+
+    .awards-news-section {
+      .awards-news-heading,
+      .book-launch-heading {
+        margin-bottom: 25px;
+
+        h2 {
+          font-size: 20px;
+          line-height: 1.35;
+        }
+      }
+
+      .awards-news-card {
+        flex-direction: column;
+        padding: 15px;
+        gap: 18px;
+
+        .awards-news-image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 10;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .awards-news-content {
+          width: 100%;
+          gap: 15px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .book-launch-section {
+      .book-launch-heading {
+        margin-bottom: 25px;
+
+        h2 {
+          font-size: 20px;
+          line-height: 1.35;
+        }
+      }
+
+      .book-launch-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .book-launch-card {
+        padding: 7px;
+
+        .book-launch-image {
+          height: auto;
+          aspect-ratio: 1 / 1;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 13px;
+          min-height: 55px;
+        }
+
+        .btn {
+          font-size: 10px;
+          padding: 10px 12px;
+        }
+      }
+    }
+
+    .awards-achievements-section {
+      padding-bottom: 25px;
+
+      .awards-achievements-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .achievement-card {
+        padding: 9px;
+
+        .achievement-image {
+          height: auto;
+          aspect-ratio: 1 / 1;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 1.6;
+        }
+
+        .achievement-year {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .awards-ornament {
+      width: 110px !important;
+    }
+  }
+}
+
+// Small Mobile
+@media (max-width: 480px) {
+  .awards-parent {
+    .awards-news-section,
+    .book-launch-section {
+      padding: 40px 14px 25px;
+    }
+
+    .book-launch-section {
+      .book-launch-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .book-launch-card {
+        padding: 10px;
+
+        .book-launch-image {
+          aspect-ratio: 16 / 10;
+        }
+
+        p {
+          min-height: auto;
+          font-size: 14px;
+        }
+
+        .btn {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .awards-achievements-section {
+      .awards-achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .achievement-card {
+        padding: 12px;
+
+        .achievement-image {
+          aspect-ratio: 4 / 3;
+        }
+
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

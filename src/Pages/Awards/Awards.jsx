@@ -8,7 +8,6 @@ import ornament7 from "../../assets/ornament-7.png";
 import ornamentHero3 from "../../assets/ornament-hero-2.png";
 import newsImage from "../../assets/Awards/profile.webp";
 
-
 import launch1 from "../../assets/Awards/a1.jpg";
 import launch2 from "../../assets/Awards/a2.jpg";
 import launch3 from "../../assets/Awards/a3.jpg";
@@ -20,6 +19,7 @@ import award3 from "../../assets/Awards/p3.webp";
 import award4 from "../../assets/Awards/p4.webp";
 import award5 from "../../assets/Awards/p5.webp";
 import award6 from "../../assets/Awards/profile.webp";
+
 const awardsData = [
   {
     id: 1,
@@ -81,13 +81,13 @@ const launchEvents = [
   {
     id: 2,
     image: launch2,
-    title: "Delighted to have attended the “AIM Literary Festival” at...",
+    title: 'Delighted to have attended the "AIM Literary Festival" at...',
     link: "https://www.facebook.com/story.php?story_fbid=pfbid03BRBFinokjeDfQqp9yrFJjuvn5rcDngqEXMT7XpjPHHnPUqtKiGBmPHeQZE3Wtmpl&id=1274908809&mibextid=WC7FNe&_rdr",
   },
   {
     id: 3,
     image: launch3,
-    title: "Deeva launches her book “Resurgence”",
+    title: 'Deeva launches her book "Resurgence"',
     link: "https://www.facebook.com/story.php?story_fbid=pfbid032jeBySsfo4Mb9HaVge8VoNumSjYstHw1b9nCQpMR5qykk2SFGjNhcT4m8xgk3Aodl&id=720251840&mibextid=WC7FNe&_rdr",
   },
   {
@@ -104,7 +104,7 @@ const Awards = () => {
 
       <Top title="Awards & Recognition" />
 
-      {/* News Articles Section */}
+      {/* News Articles */}
       <section className="awards-news-section">
 
         <img
@@ -129,7 +129,7 @@ const Awards = () => {
         <div className="awards-news-card">
 
           <div className="awards-news-image">
-            <img src={newsImage} alt="News article" />
+            <img src={newsImage} alt="Deeva Karnani Shah" />
           </div>
 
           <div className="awards-news-content">
@@ -151,7 +151,7 @@ const Awards = () => {
         </div>
       </section>
 
-      {/* Book Launch Section */}
+      {/* Book Launch */}
       <section className="book-launch-section">
 
         <img
@@ -166,7 +166,6 @@ const Awards = () => {
           className="awards-ornament awards-ornament-right"
         />
 
-        {/* Heading */}
         <div className="book-launch-heading">
           <span>Book Launch</span>
           <h2>
@@ -174,7 +173,6 @@ const Awards = () => {
           </h2>
         </div>
 
-        {/* Gallery */}
         <div className="book-launch-grid">
 
           {launchEvents.map((item) => (
@@ -199,34 +197,34 @@ const Awards = () => {
           ))}
 
         </div>
-
       </section>
-      {/* Awards & Achievements Section */}
-<section className="awards-achievements-section">
 
-  <div className="awards-achievements-grid">
+      {/* Awards & Achievements */}
+      <section className="awards-achievements-section">
 
-    {awardsData.map((item) => (
-      <div className="achievement-card" key={item.id}>
+        <div className="awards-achievements-grid">
 
-        <div className="achievement-image">
-          <img src={item.image} alt={item.title} />
+          {awardsData.map((item) => (
+            <div className="achievement-card" key={item.id}>
+
+              <div className="achievement-image">
+                <img src={item.image} alt={item.title} />
+              </div>
+
+              <span className="achievement-year">
+                {item.year}
+              </span>
+
+              <h3>{item.title}</h3>
+
+              <p>{item.description}</p>
+
+            </div>
+          ))}
+
         </div>
 
-        <span className="achievement-year">
-          {item.year}
-        </span>
-
-        <h3>{item.title}</h3>
-
-        <p>{item.description}</p>
-
-      </div>
-    ))}
-
-  </div>
-
-</section>
+      </section>
 
       <BF />
 

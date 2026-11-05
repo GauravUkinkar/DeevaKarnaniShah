@@ -6,7 +6,7 @@ import ornamentHero2 from "../../assets/ornament-hero-2.png";
 
 const Top = ({ title }) => {
   return (
-    <div className="elementor-background-overlay">
+    <div className="elementor-background-overlay parent">
       <img
         src={ornament7}
         alt=""

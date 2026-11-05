@@ -70,9 +70,10 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <div className="testimonial-parent parent">
+      <Top title="Testimonial" />
       <div className="testimonial-container container">
 
-        <Top title="Testimonial"/>
+
 
         <h3>Words from Readers, Testimonials that Speak Volumes</h3>
 
@@ -94,15 +95,16 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
-        {/* Contact CTA Section */}
-        <BF 
-        title="Let's Share Thoughts and Ideas"
-          buttonText="GET IN TOUCH"
-  buttonLink="/contact"
-  />
+       
 
 
       </div>
+       {/* Contact CTA Section */}
+        <BF
+          title="Let's Share Thoughts and Ideas"
+          buttonText="GET IN TOUCH"
+          buttonLink="/contact"
+        />
     </div>
   );
 };
