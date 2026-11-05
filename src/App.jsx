@@ -7,6 +7,9 @@ import Testimonial from './Pages/Testimonial/Testimonial'
 import Footer from './componant/Footer/Footer'
 import Home from './Pages/Home/Home'
 import Contact from './Pages/Contact/Contact'
+import Blog from './Pages/Blog/Blog'
+import Charity from './Pages/Charity/Charity'
+
 
 function App() {
 
@@ -18,6 +21,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/charity" element={<Charity />} />
+
+
 
 
 
