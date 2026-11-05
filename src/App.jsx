@@ -1,21 +1,20 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.scss'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Header from './componant/Header/Header'
-import Testimonial from './Pages/Testimonial/Testimonial'
-import Footer from './componant/Footer/Footer'
-import Home from './Pages/Home/Home'
-import Contact from './Pages/Contact/Contact'
-import Blog from './Pages/Blog/Blog'
-import Charity from './Pages/Charity/Charity'
-
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./componant/Header/Header";
+import Testimonial from "./Pages/Testimonial/Testimonial";
+import Footer from "./componant/Footer/Footer";
+import Home from "./Pages/Home/Home";
+import Contact from "./Pages/Contact/Contact";
+import Blog from "./Pages/Blog/Blog";
+import Charity from "./Pages/Charity/Charity";
+import Awards from "./Pages/Awards/Awards";
 
 function App() {
-
   return (
     <>
-      <BrowserRouter >
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,16 +22,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/charity" element={<Charity />} />
-
-
-
-
-
+          <Route path="/awards" element={<Awards />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
