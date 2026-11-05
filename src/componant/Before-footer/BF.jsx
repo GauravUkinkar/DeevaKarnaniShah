@@ -11,30 +11,36 @@ const BF = ({
   className = "",
 }) => {
   return (
-    <div className={`contact-cta-section ${className}`}>
+    <div className="contact-before-parent parent">
 
-      <img
-        src={ornamentHero2}
-        alt=""
-        className="cta-ornament cta-ornament-left"
-      />
+      <div className="contact-before-cont container">
+        <div className="contact-cta-section">
+
+          <img
+            src={ornamentHero2}
+            alt=""
+            className="cta-ornament cta-ornament-left"
+          />
 
 
-      <div className="cta-content">
-        <h2>{title}</h2>
+          <div className="cta-content">
+            <h2>{title}</h2>
 
-        <a href={buttonLink} className="btn">
-          {buttonText}
-        </a>
+            <a href={buttonLink} className="btn">
+              {buttonText}
+            </a>
+          </div>
+
+          <img
+            src={ornamentHero3}
+            alt="ornamentHero3"
+            className="cta-ornament cta-ornament-right"
+          />
+
+        </div>
       </div>
-
-      <img
-        src={ornamentHero3}
-        alt="ornamentHero3"
-        className="cta-ornament cta-ornament-right"
-      />
-
     </div>
+
   );
 };
 
