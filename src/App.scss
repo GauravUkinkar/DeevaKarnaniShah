@@ -1,0 +1,258 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --accent: #568b00;
+  --accentDark: #3f6e00;
+  --grey: #f8f3e9;
+  --white: #ffffff;
+  --black: #064b55;
+  --text: #45545a;
+  --text2: #829078;
+
+  --width: 1400px;
+  --unit: 1rem;
+  --trans: all 0.5s ease-out;
+
+  --shadow: 0px 8px 30px rgba(6, 75, 85, 0.08);
+  --shadowHover: 0px 12px 35px rgba(6, 75, 85, 0.15);
+
+  --gradient: linear-gradient(135deg, #568b00 0%, #3f6e00 100%);
+  --gradientDark: linear-gradient(135deg, #3f6e00 0%, #064b55 100%);
+
+  --glass: rgba(255, 255, 255, 0.65);
+  --glassBorder: rgba(229, 205, 165, 0.5);
+  --glassBlur: blur(20px);
+
+  --radius: 20px;
+  --radiusSmall: 12px;
+}
+
+.light {
+  --grey: #f8f3e9;
+  --white: #ffffff;
+  --black: #064b55;
+  --text: #45545a;
+  --text2: #829078;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 75% 15%,
+      rgba(229, 205, 165, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 10% 45%,
+      rgba(255, 255, 255, 0.95),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #faf0e1 50%,
+      #f8f3e9 100%
+    );
+  background-attachment: fixed;
+  color: var(--text);
+  overflow-x: hidden;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+.parent {
+  width: 100%;
+
+  .container {
+    padding: 0px calc(var(--unit) / 1);
+    max-width: var(--width);
+    margin: auto;
+    height: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+.heading {
+  color: var(--black);
+  line-height: 105%;
+  font-weight: 800;
+  font-style: normal;
+
+  span {
+    color: var(--accent);
+    font-size: inherit;
+  }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p,
+.para,
+a {
+  line-height: 160%;
+  letter-spacing: 0;
+  word-spacing: 1px;
+  text-wrap: pretty;
+  font-weight: 400;
+}
+
+p,
+.para {
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  cursor: pointer;
+  background: var(--gradient);
+  transition: all 0.4s ease;
+  width: fit-content;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(6, 75, 85, 0.15);
+
+  &:hover {
+    background: var(--gradientDark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadowHover);
+  }
+}
+
+.btn2 {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 0.75rem 1.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--glass);
+  border: 1px solid var(--glassBorder);
+  border-radius: 4px;
+  backdrop-filter: var(--glassBlur);
+
+  &:hover {
+    background: var(--white);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: var(--glassBlur);
+  -webkit-backdrop-filter: var(--glassBlur);
+  border: 1px solid var(--glassBorder);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  color: var(--black);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+
+  span {
+    color: var(--accent);
+  }
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--accentDark);
+}
+
+::selection {
+  color: white;
+  background: var(--accentDark);
+}
+
+.imghover {
+  transition: var(--trans);
+
+  &:hover {
+    transform: scale(1.02) rotate(1deg);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--accentDark) !important;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.25);
+
+  svg {
+    fill: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
