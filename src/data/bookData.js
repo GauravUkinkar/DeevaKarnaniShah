@@ -24,8 +24,8 @@ const booksData = [
             { label: "Language", value: "English" },
         ],
 
-        amazonLink: "",
-        publisherLink: "",
+        amazonLink: "https://www.amazon.co.uk/Resurgence-Defying-Deeva-Karnani-Shah/dp/1738420000/ref=sr_1_3?crid=26BJY1HKQGRG4&keywords=deeva+karnani+shah&qid=1701233958&sprefix=%2Caps%2C177&sr=8-3",
+        publisherLink: "#",
         publisherName: "Author In Me",
     },
 
@@ -50,8 +50,8 @@ const booksData = [
             { label: "Language", value: "English" },
         ],
 
-        amazonLink: "",
-        publisherLink: "",
+        amazonLink: "https://www.amazon.co.uk/Space-Orb-Deeva-Karnani-Shah-ebook/dp/B09MVDPHXZ/ref=sr_1_1?crid=HS1HSUJ2ERNH&keywords=deeva+karnani+shah&qid=1700112495&sprefix=deeva+karnani+shah%2Caps%2C244&sr=8-1",
+        publisherLink: "https://www.authorinme.com/shop/ols/products/the-space-orb-by-deeva-karnani-shah-imprint-young-voices",
         publisherName: "Young Voices",
     },
 
@@ -76,8 +76,8 @@ const booksData = [
             { label: "Language", value: "English" },
         ],
 
-        amazonLink: "",
-        publisherLink: "",
+        amazonLink: "https://www.amazon.co.uk/Poco-Lombo-Vesuvius-lost-Pompeii-ebook/dp/B08PC3Z4TM/ref=sr_1_4?keywords=deeva+karnani+shah&qid=1700114342&sr=8-4",
+        publisherLink: "https://www.authorinme.com/shop/ols/products/poco-o-lombo-is-vesuvius-the-lost-tale-of-pompeii",
         publisherName: "Author In Me",
     },
 
@@ -100,8 +100,8 @@ const booksData = [
             { label: "Language", value: "English" },
         ],
 
-        amazonLink: "",
-        publisherLink: "",
+        amazonLink: "https://www.amazon.co.uk/Mysterious-Island-Deeva-Karnani-Shah-ebook/dp/B07N2T78MK/ref=sr_1_2?keywords=deeva+karnani+shah&qid=1700114342&sr=8-2",
+        publisherLink: "#",
         publisherName: "Author In Me",
     },
 ];

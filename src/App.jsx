@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact/Contact";
 import Blog from "./Pages/Blog/Blog";
 import Charity from "./Pages/Charity/Charity";
 import Awards from "./Pages/Awards/Awards";
+import BookDetails from "./Pages/BookDetails/BookDetails";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/charity" element={<Charity />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/books/:slug" element={<BookDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>
