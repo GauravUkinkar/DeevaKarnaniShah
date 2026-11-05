@@ -1,18 +1,105 @@
+
 .testimonial-parent {
-  padding: 80px 0;
+  padding: 80px 0 50px;
   background-color: var(--white);
 
-
   .testimonial-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .elementor-background-overlay{
-        background-color: var(--bg);
-        width: 100%;
-        height: 100px;
+
+  
+    .elementor-background-overlay {
+      position: relative;
+      background-color: #faf0e1;
+      width: 100%;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      overflow: hidden;
+
+      p {
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 1.2em;
+        color: #063b41;
+        z-index: 2;
+      }
+
+      .ornament {
+        position: absolute;
+        height: 100%;
+        width: 180px;
+        object-fit: contain;
+        pointer-events: none;
+      }
+
+      .ornament1 {
+        left: 0;
+        top: 0;
+      }
+
+      .ornament2 {
+        right: 0;
+        bottom: 0;
+      }
     }
 
+    h3 {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 30px;
+    }
 
+  
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 30px;
+
+      .testimonial-card {
+        background-color: #faf0e1;
+        border-radius: 20px;
+        min-height: 210px;
+        padding: 25px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        transition: all 0.4s ease;
+
+
+
+        .testimonial-review {
+          font-size: 15px;
+          line-height: 1.8;
+          color: #725247;
+          margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 15px;
+        }
+
+        h4 {
+          font-size: 17px;
+          font-weight: 700;
+          color: #725247;
+          margin-bottom: 2px;
+        }
+
+        span {
+          font-size: 13px;
+          color: #725247;
+        }
+      }
+    }
   }
 }
+
+
+
