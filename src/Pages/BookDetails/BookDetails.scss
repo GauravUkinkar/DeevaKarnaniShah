@@ -1,19 +1,14 @@
-
 .book-details-parent {
-  padding: 0;
-
   // Title Banner
   .book-title-banner {
-    min-height: 150px;
+    min-height: 200px;
     background: #faf0e1;
     border-radius: 15px;
-    margin: 10px 15px 0;
-    padding: 25px 20px;
-
+    margin: 10px 15px;
+    padding: 30px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: relative;
     overflow: hidden;
 
@@ -38,21 +33,23 @@
     }
 
     .left-decoration {
-      left: 0;
-      top: 0;
+      left: -2%;
+      top: -5%;
       transform: rotate(180deg);
     }
 
     .right-decoration {
-      right: 0;
-      bottom: 0;
+      right: -2%;
+      bottom: -10%;
+      width: 200px;
+      transform: rotate(180deg);
     }
   }
 
   // Main Content
   .book-details-cont {
     padding-top: 70px;
-    padding-bottom: 75px;
+    padding-bottom: 80px;
 
     .book-details-main {
       display: flex;
@@ -62,11 +59,7 @@
 
       // Book Image
       .book-cover {
-        width: 38%;
-        max-width: 400px;
-        height: 500px;
-        flex-shrink: 0;
-
+        width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,9 +69,6 @@
           height: 100%;
           object-fit: contain;
           object-position: center;
-          display: block;
-
-          filter: drop-shadow(7px 9px 7px rgba(0, 0, 0, 0.25));
         }
       }
 
@@ -88,7 +78,7 @@
         max-width: 600px;
 
         h2 {
-          font-size: 26px;
+          font-size: 30px;
           font-weight: 500;
           line-height: 1.3;
           color: #064b55;
@@ -103,12 +93,12 @@
           margin-bottom: 28px;
 
           svg {
-            font-size: 12px;
+            font-size: 14px;
             color: #064b55;
           }
 
           span {
-            font-size: 11px;
+            font-size: 14px;
             color: #45545a;
             margin-left: 5px;
           }
@@ -129,12 +119,12 @@
             border: none;
             border-bottom: 2px solid transparent;
 
-            padding: 13px 18px;
+            padding: 14px 18px;
             margin-bottom: -1px;
 
             font-family: inherit;
-            font-size: 13px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 800;
             color: #064b55;
 
             cursor: pointer;
@@ -157,7 +147,7 @@
 
           .book-synopsis {
             p {
-              font-size: 12px;
+              font-size: 14px;
               line-height: 1.8;
               color: #45545a;
               margin-bottom: 12px;
@@ -181,7 +171,7 @@
               }
 
               span {
-                font-size: 12px;
+                font-size: 14px;
                 color: #45545a;
               }
             }
@@ -192,7 +182,7 @@
         .book-action-buttons {
           display: flex;
           align-items: stretch;
-          gap: 15px;
+          gap: 16px;
           margin-top: 15px;
 
           a,
@@ -202,13 +192,13 @@
             min-width: 0;
             min-height: 48px;
             padding: 8px 12px;
-
+            cursor: pointer !important;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
 
-            background: #064b55;
+            background: #064b55 ;
             color: #ffffff;
 
             box-shadow: 5px 5px 0 #b8d4d2;
@@ -228,7 +218,7 @@
               line-height: 1.3;
 
               small {
-                font-size: 9px;
+                font-size: 10px;
                 font-weight: 400;
               }
             }
@@ -237,58 +227,9 @@
               box-shadow: none;
             }
 
-            &.disabled {
-              opacity: 0.65;
-              cursor: default;
-              box-shadow: none;
-            }
+         
           }
         }
-      }
-    }
-  }
-
-  // Bottom Thoughts
-  .book-thoughts {
-    min-height: 110px;
-    padding: 30px 20px;
-
-    background: #faf0e1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #064b55;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .thought-line {
-      width: 70px;
-      height: 2px;
-      background: #568b00;
-      margin-top: 14px;
-    }
-
-    .thought-decoration {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 110px;
-      pointer-events: none;
-
-      img {
-        width: 100%;
-        display: block;
       }
     }
   }
@@ -408,14 +349,6 @@
             gap: 12px;
           }
         }
-      }
-    }
-
-    .book-thoughts {
-      min-height: 95px;
-
-      h2 {
-        font-size: 16px;
       }
     }
   }
