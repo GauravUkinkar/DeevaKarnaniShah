@@ -1,16 +1,14 @@
-
 .about-parent {
-  padding: 60px 0;
+  padding: 20px 0px;
 
   .about-cont {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 38px;
-
+    gap: 20px;
     // Left Image
     .about-image {
-      width: 42%;
+      width: 45%;
       height: 525px;
       flex-shrink: 0;
       overflow: hidden;
@@ -33,12 +31,12 @@
 
     // Right Content
     .about-content {
-      flex: 1;
+      width: 65%;
 
       .about-subtitle {
         display: block;
         font-family: Georgia, serif;
-        font-size: 14px;
+        font-size: 16px;
         font-style: italic;
         font-weight: 400;
         color: #568b00;
@@ -46,7 +44,7 @@
       }
 
       h2 {
-        font-size: clamp(22px, 2vw, 24px);
+        font-size: clamp(24px, 2vw, 28px);
         line-height: 1.15;
         font-weight: 600;
         color: #064b55;
@@ -54,7 +52,7 @@
       }
 
       > p {
-        font-size: 13px;
+        font-size: 16px;
         line-height: 1.7;
         color: #45545a;
         margin-bottom: 8px;
@@ -62,11 +60,11 @@
 
       .about-highlight {
         background: #faf0e1;
-        padding: 28px 25px;
+        padding: 28px 26px;
         border-radius: 17px;
 
         p {
-          font-size: 13px;
+          font-size: 16px;
           line-height: 1.8;
           color: #45545a;
           margin: 0;

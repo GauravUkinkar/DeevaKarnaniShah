@@ -2,8 +2,8 @@
 .hero-parent {
 
   .hero-cont {
-
-    padding: 60px 20px;
+max-width:1400px;
+    
     background: #faf0e1;
     border-radius: 20px;
 
@@ -121,14 +121,7 @@
   }
 }
 
-// Large Screens
-@media (min-width: 1500px) {
-  .hero-parent {
-    .hero-cont {
-      max-width: 1536px;
-    }
-  }
-}
+
 
 // Tablet
 @media (max-width: 1024px) {
