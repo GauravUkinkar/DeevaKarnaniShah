@@ -10,6 +10,8 @@ import test3 from "../../assets/3test.jpg"
 import test4 from "../../assets/4test.jpg"
 import test5 from "../../assets/5test.jpg"
 import test6 from "../../assets/6test.jpg"
+import ornamentHero2 from "../../assets/ornament-hero-1.png";
+import ornamentHero3 from "../../assets/ornament-hero-2.png";
 
 
 const testimonials = [
@@ -105,6 +107,30 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
+        {/* Contact CTA Section */}
+<div className="contact-cta-section">
+
+  <img
+    src={ornamentHero2}
+    alt=""
+    className="cta-ornament cta-ornament-left"
+  />
+
+  <div className="cta-content">
+    <h2>Let's Share Thoughts and Ideas</h2>
+
+    <a href="#contact" className="btn">
+      CONTACT ME
+    </a>
+  </div>
+
+  <img
+    src={ornamentHero3}
+    alt=""
+    className="cta-ornament cta-ornament-right"
+  />
+
+</div>
 
       </div>
     </div>
