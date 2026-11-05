@@ -12,6 +12,7 @@ import test5 from "../../assets/5test.jpg"
 import test6 from "../../assets/6test.jpg"
 import ornamentHero2 from "../../assets/ornament-hero-1.png";
 import ornamentHero3 from "../../assets/ornament-hero-2.png";
+import Top from "../../componant/Top-sec/Top";
 
 
 const testimonials = [
@@ -70,22 +71,7 @@ const Testimonial = () => {
     <div className="testimonial-parent parent">
       <div className="testimonial-container container">
 
-        {/* Heading Banner */}
-        <div className="elementor-background-overlay">
-          <img
-            src={ornament7}
-            alt=""
-            className="ornament ornament1"
-          />
-
-          <p>Testimonials</p>
-
-          <img
-            src={ornamentHero}
-            alt=""
-            className="ornament ornament2"
-          />
-        </div>
+        <Top title="Testimonial"/>
 
         <h3>Words from Readers, Testimonials that Speak Volumes</h3>
 

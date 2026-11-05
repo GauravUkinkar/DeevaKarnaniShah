@@ -1,0 +1,39 @@
+.elementor-background-overlay {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  background-color: #fbf1e2;
+  border-radius: 15px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 500;
+    color: #004653;
+    margin: 0;
+  }
+
+  .ornament {
+    position: absolute;
+    height: 100%;
+    width: 180px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .ornament1 {
+    left: -35px;
+    top: 0;
+  }
+
+  .ornament2 {
+    right: -60px;
+    bottom: -40px;
+  }
+}
