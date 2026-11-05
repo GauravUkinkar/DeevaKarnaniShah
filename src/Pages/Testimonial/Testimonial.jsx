@@ -13,6 +13,7 @@ import test6 from "../../assets/6test.jpg"
 import ornamentHero2 from "../../assets/ornament-hero-1.png";
 import ornamentHero3 from "../../assets/ornament-hero-2.png";
 import Top from "../../componant/Top-sec/Top";
+import BF from "../../componant/Before-footer/BF";
 
 
 const testimonials = [
@@ -94,29 +95,12 @@ const Testimonial = () => {
           ))}
         </div>
         {/* Contact CTA Section */}
-<div className="contact-cta-section">
-
-  <img
-    src={ornamentHero2}
-    alt=""
-    className="cta-ornament cta-ornament-left"
+        <BF 
+        title="Let's Share Thoughts and Ideas"
+          buttonText="GET IN TOUCH"
+  buttonLink="/contact"
   />
 
-  <div className="cta-content">
-    <h2>Let's Share Thoughts and Ideas</h2>
-
-    <a href="#contact" className="btn">
-      CONTACT ME
-    </a>
-  </div>
-
-  <img
-    src={ornamentHero3}
-    alt=""
-    className="cta-ornament cta-ornament-right"
-  />
-
-</div>
 
       </div>
     </div>

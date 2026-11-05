@@ -1,0 +1,133 @@
+
+.contact-parent {
+//   padding: 0 40px 40px 0;
+
+  .contact-container {
+    .contact-form-section {
+      max-width: 100%;
+    margin-top: 50px; 
+      padding: 40px;
+      background: #fbf1e2;
+      border-radius: 15px;
+
+      .contact-form-heading {
+        text-align: center;
+        margin-bottom: 35px;
+
+        h2 {
+          color: #004653;
+          font-size: 28px;
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+
+        p {
+          color: #777;
+          font-size: 15px;
+          margin: 0;
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .form-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 25px;
+        }
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #004653;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d8d2c7;
+            border-radius: 6px;
+            outline: none;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            font-family: inherit;
+            transition: 0.3s ease;
+
+            &:focus {
+              border-color: #195b65;
+              box-shadow: 0 0 0 3px rgba(25, 91, 101, 0.08);
+            }
+
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 160px;
+          }
+        }
+
+        .form-submit {
+          display: flex;
+          justify-content: center;
+
+          .btn {
+            min-width: 170px;
+            padding: 14px 28px;
+            border: none;
+            background: #195b65;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 #b8d9d9;
+            transition: 0.3s ease;
+
+            &:hover {
+              background: #004653;
+              transform: translate(3px, 3px);
+              box-shadow: 2px 2px 0 #b8d9d9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-parent {
+    .contact-container {
+      .contact-form-section {
+        padding: 25px 18px;
+        margin-top: 30px;
+
+        .contact-form-heading {
+          h2 {
+            font-size: 23px;
+          }
+        }
+
+        .contact-form {
+          .form-row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}

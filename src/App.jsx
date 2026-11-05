@@ -6,6 +6,7 @@ import Header from './componant/Header/Header'
 import Testimonial from './Pages/Testimonial/Testimonial'
 import Footer from './componant/Footer/Footer'
 import Home from './Pages/Home/Home'
+import Contact from './Pages/Contact/Contact'
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/testimonial" element={<Testimonial />} />
+          <Route path="/contact" element={<Contact />} />
+
 
 
         </Routes>
