@@ -1,10 +1,14 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/logo.png";
+
 const Header = () => {
   const location = useLocation();
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [booksOpen, setBooksOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", link: "/" },
@@ -44,30 +48,52 @@ const Header = () => {
     }
   }, [location.pathname, location.hash]);
 
+  // Close menu when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+    setBooksOpen(false);
+  }, [location.pathname]);
+
+  // Close menu when clicking navigation
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setBooksOpen(false);
+  };
+
   return (
     <header className="header-parent parent">
       <div className="header-cont container">
 
         {/* Logo */}
-        <Link to="/" className="header-logo">
-          <img
-            src={logo}
-            alt="Deeva Karnani Shah"
-          />
+        <Link to="/" className="header-logo" onClick={closeMenu}>
+          <img src={logo} alt="Deeva Karnani Shah" />
         </Link>
 
+        {/* Mobile Toggle */}
+        <button
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         {/* Navigation */}
-        <nav className="header-nav">
+        <nav className={`header-nav ${menuOpen ? "show" : ""}`}>
           {navLinks.map((item) => (
             <div
               className={`nav-item ${
                 item.dropdown ? "has-dropdown" : ""
-              }`}
+              } ${item.dropdown && booksOpen ? "dropdown-open" : ""}`}
               key={item.name}
             >
               {item.isSection ? (
                 <a
                   href="/#about"
+                  onClick={closeMenu}
                   className={
                     location.pathname === "/" &&
                     location.hash === "#about"
@@ -81,11 +107,25 @@ const Header = () => {
                 <NavLink
                   to={item.link}
                   end={item.link === "/"}
+                  onClick={(e) => {
+                    if (
+                      item.dropdown &&
+                      window.innerWidth <= 850
+                    ) {
+                      e.preventDefault();
+                      setBooksOpen(!booksOpen);
+                    } else {
+                      closeMenu();
+                    }
+                  }}
                   className={({ isActive }) =>
                     isActive ? "active" : ""
                   }
                 >
                   {item.name}
+                  {item.dropdown && (
+                    <span className="dropdown-arrow">⌄</span>
+                  )}
                 </NavLink>
               )}
 
@@ -96,6 +136,7 @@ const Header = () => {
                     <Link
                       to={subItem.link}
                       key={subItem.name}
+                      onClick={closeMenu}
                     >
                       {subItem.name}
                     </Link>

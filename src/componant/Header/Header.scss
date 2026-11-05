@@ -1,10 +1,13 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
 .header-parent {
   width: 100%;
   background: #ffffff;
   position: relative;
   z-index: 999;
   padding: 0;
+  font-family: "Outfit", sans-serif;
 
   .header-cont {
     width: 100%;
@@ -120,6 +123,46 @@
         }
       }
     }
+
+    // Mobile Toggle
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 32px;
+      height: 28px;
+      padding: 3px 0;
+
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1001;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #064b55;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      &.open {
+        span {
+          &:first-child {
+            transform: translateY(10px) rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:last-child {
+            transform: translateY(-10px) rotate(-45deg);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -151,48 +194,114 @@
 @media (max-width: 850px) {
   .header-parent {
     .header-cont {
-      min-height: auto;
-      padding: 15px 20px;
+      min-height: 75px;
+      padding: 12px 20px;
 
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
       gap: 15px;
 
       .header-logo {
         img {
           width: 240px;
+          max-height: 50px;
         }
       }
 
+      // Hamburger
+      .menu-toggle {
+        display: flex;
+      }
+
+      // Mobile Navigation
       .header-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+
+        padding: 15px 20px 20px;
+        background: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         justify-content: flex-start;
-        gap: 25px;
+        gap: 0;
 
-        overflow-x: auto;
-        overflow-y: visible;
-        padding: 5px 0 12px;
+        box-shadow: 0 12px 20px rgba(6, 75, 85, 0.08);
 
-        &::-webkit-scrollbar {
-          display: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+
+        &.show {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transform: translateY(0);
         }
 
-        scrollbar-width: none;
+        .nav-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
 
-        .nav-item > a {
-          font-size: 14px;
-        }
+          border-bottom: 1px solid rgba(229, 205, 165, 0.5);
 
-        .nav-item.has-dropdown {
-          .nav-dropdown {
-            left: 0;
-            transform: translateY(10px);
+          > a {
+            width: 100%;
+            padding: 12px 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-family: "Outfit", sans-serif;
+            font-size: 15px;
           }
 
-          &:hover,
-          &:focus-within {
+          // Dropdown
+          &.has-dropdown {
             .nav-dropdown {
-              transform: translateY(0);
+              position: static;
+              transform: none;
+              width: 100%;
+
+              max-height: 0;
+              overflow: hidden;
+
+              padding: 0;
+              border-radius: 8px;
+              box-shadow: none;
+
+              opacity: 0;
+              visibility: hidden;
+              pointer-events: none;
+
+              transition: all 0.3s ease;
+
+              a {
+                padding: 10px 20px;
+                font-family: "Outfit", sans-serif;
+                font-size: 14px;
+              }
+            }
+
+            &.dropdown-open {
+              .nav-dropdown {
+                max-height: 300px;
+                padding: 5px 0 10px;
+
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+              }
             }
           }
         }
@@ -205,16 +314,18 @@
 @media (max-width: 480px) {
   .header-parent {
     .header-cont {
-      padding: 12px 15px;
+      min-height: 68px;
+      padding: 10px 15px;
 
       .header-logo {
         img {
           width: 210px;
+          max-height: 45px;
         }
       }
 
       .header-nav {
-        gap: 20px;
+        padding: 12px 15px 18px;
       }
     }
   }
