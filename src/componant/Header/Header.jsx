@@ -1,8 +1,11 @@
 
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Header.scss";
+import logo from "../../assets/logo.png";
 const Header = () => {
+  const location = useLocation();
+
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "About", link: "/#about", isSection: true },
@@ -29,33 +32,51 @@ const Header = () => {
     { name: "Contact Me", link: "/contact" },
   ];
 
+  // Handle About section navigation
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash === "#about") {
+      requestAnimationFrame(() => {
+        document.getElementById("about")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }, [location.pathname, location.hash]);
+
   return (
-    <div className="header-parent parent">
+    <header className="header-parent parent">
       <div className="header-cont container">
+
+        {/* Logo */}
         <Link to="/" className="header-logo">
-          <svg viewBox="0 0 30 35" fill="none">
-            <path
-              d="M25 2C16 7 8 17 3 31C11 25 21 14 25 2Z"
-              fill="#568B00"
-            />
-            <path
-              d="M5 28L21 8M10 22L8 18M14 17L12 13M18 12L16 9"
-              stroke="#FAF0E1"
-              strokeWidth="1.2"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span>Deeva Karnani Shah</span>
+          <img
+            src={logo}
+            alt="Deeva Karnani Shah"
+          />
         </Link>
 
+        {/* Navigation */}
         <nav className="header-nav">
           {navLinks.map((item) => (
             <div
-              className={`nav-item ${item.dropdown ? "has-dropdown" : ""}`}
+              className={`nav-item ${
+                item.dropdown ? "has-dropdown" : ""
+              }`}
               key={item.name}
             >
               {item.isSection ? (
-                <a href={item.link}>{item.name}</a>
+                <a
+                  href="/#about"
+                  className={
+                    location.pathname === "/" &&
+                    location.hash === "#about"
+                      ? "active"
+                      : ""
+                  }
+                >
+                  {item.name}
+                </a>
               ) : (
                 <NavLink
                   to={item.link}
@@ -68,10 +89,14 @@ const Header = () => {
                 </NavLink>
               )}
 
+              {/* Books Dropdown */}
               {item.dropdown && (
                 <div className="nav-dropdown">
                   {item.dropdown.map((subItem) => (
-                    <Link to={subItem.link} key={subItem.name}>
+                    <Link
+                      to={subItem.link}
+                      key={subItem.name}
+                    >
                       {subItem.name}
                     </Link>
                   ))}
@@ -80,8 +105,9 @@ const Header = () => {
             </div>
           ))}
         </nav>
+
       </div>
-    </div>
+    </header>
   );
 };
 
