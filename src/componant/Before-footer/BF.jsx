@@ -7,7 +7,7 @@ import ornamentHero3 from "../../assets/ornament-hero-2.png";
 const BF = ({
   title = "Let's Share Thoughts and Ideas",
   buttonText = "CONTACT ME",
-  buttonLink = "#contact",
+  buttonLink = "/contact",
   className = "",
 }) => {
   return (

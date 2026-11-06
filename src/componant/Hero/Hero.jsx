@@ -40,7 +40,7 @@ const Hero = () => {
             star in the literary world.
           </p>
 
-          <a href="/books" className="hero-btn">
+          <a href="#books" className="hero-btn">
             MY BOOKS
           </a>
         </div>

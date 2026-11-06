@@ -47,7 +47,7 @@ const Footer = () => {
 
         {/* Email */}
         <a
-          href="info@deevakarnanishah.com"
+          href="mailto:info@deevakarnanishah.com"
           className="footer-email"
         >
           <svg
